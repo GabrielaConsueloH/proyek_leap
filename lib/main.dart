@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:proyek_leap/login.dart';
+
+import 'Layout/home.dart';
+import 'Layout/login.dart';
+import 'Layout/request_darah_instansi.dart';
 
 void main() {
   runApp(const Route());
@@ -11,7 +14,11 @@ class Route extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: login(),
+      routes: {
+        '/' : (context) =>request_darah_instansi(),
+        '/home' : (context) => home(),
+        '/req_instansi' : (context) => request_darah_instansi(),
+      },
     );
   }
 }
